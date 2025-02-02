@@ -2,3 +2,32 @@
   box-sizing: border-box;
   background-color: bisque;
 }
+
+#loading {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it sits on top */
+}
+
+/* Spinner style */
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 12px solid #f3f3f3; /* Light gray border */
+  border-top: 12px solid #3498db; /* Blue border on top */
+  border-radius: 50%;
+  animation: spin 2.5s linear infinite;
+}
+
+/* Keyframes for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
