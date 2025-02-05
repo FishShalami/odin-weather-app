@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
-  background-color: bisque;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #loading {
@@ -30,4 +34,43 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+body {
+  padding: 15px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+/* Styles for the weather card container */
+.weather-card {
+  border: 1px solid #050506;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #75a7ee;
+}
+
+.weather-card:hover {
+  background-color: #75ccee;
+}
+
+/* Styles for the header within the weather card */
+.weather-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-emoji {
+  font-size: 50px; /* Adjust size as needed */
+  display: block;
+  margin-bottom: 10px;
 }

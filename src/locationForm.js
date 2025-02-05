@@ -1,9 +1,10 @@
 import getWeatherData from "./apiFetch";
+import processWeatherData from "./processData";
 
 function getLocation() {
   document.addEventListener("DOMContentLoaded", () => {
     const locationForm = document.getElementById("locationForm");
-    locationForm.addEventListener("submit", (event) => {
+    locationForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       const locationInput = document
@@ -15,7 +16,9 @@ function getLocation() {
         return;
       }
       console.log(`User entered ${locationInput}`);
-      getWeatherData(locationInput);
+      const weatherData = await getWeatherData(locationInput);
+
+      processWeatherData(weatherData);
     });
   });
 }
