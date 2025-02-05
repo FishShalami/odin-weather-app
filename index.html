@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width="device-width", initial-scale=1.0">
+    <title>Document</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header>
+      <h1>Dave's Weather App</h1>
+    </header>
+    <!-- Form to collect location -->
+    <form id="locationForm">
+      <label for="locationInput">Enter City, State:</label>
+      <input type="text" id="locationInput" name="location" required />
+      <button type="submit">Get Weather</button>
+    </form>
+    <!-- Loading icon container -->
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
+    <div class="content"></div>
+  </body>
+</html>
