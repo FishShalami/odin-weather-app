@@ -39,6 +39,7 @@ function processWeatherData(weatherData) {
 
     // Create and style a header for the date or day
     const headerEl = document.createElement("h3");
+    console.log(day.datetime + formatDate(day.datetime));
     headerEl.textContent = formatDate(day.datetime);
     headerEl.style.marginBottom = "10px";
     headerEl.style.color = "#333";
@@ -68,6 +69,7 @@ function processWeatherData(weatherData) {
 function formatDate(apiDate) {
   const date = new Date(apiDate);
   return date.toLocaleDateString("en-US", {
+    timeZone: "UTC",
     month: "short",
     day: "numeric",
     year: "numeric",
